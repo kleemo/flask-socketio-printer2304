@@ -19,10 +19,13 @@ import shapehandler
 import slicerhandler
 import point_calc as pc
 
-port = 'COM3'
-# port = '/dev/tty.usbmodem14101' # use this port value for Aurelian
-baud = 115200 # baud rate as defined in the streamline-delta-arduino firmware
-# baud = 250000 # use this baud rate for the ZhDK Makerbot printer
+#port = 'COM3' #for MS Windows
+port = '/dev/tty.usbmodem144101' # use this port value for Makerbot
+#port = '/dev/cu.usbmodem144401' #port value1 streamline-delta-arduino Mac Right multiple port
+#port = '/dev/cu.usbmodem14101' #port value2 streamline-delta-arduino Mac Left second port
+#port = '/dev/cu.usbmodem1411401' #port value3 streamline-delta-arduino Mac Left multiple port
+#baud = 115200 # baud rate as defined in the streamline-delta-arduino firmware / Mac
+baud = 250000 # use this baud rate for the Makerbot printer
 
 # connect to printer
 print_handler = DefaultUSBHandler(port, baud)
